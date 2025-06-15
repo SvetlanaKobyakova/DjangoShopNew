@@ -34,6 +34,7 @@ class ProductCreateView(CreateView):
     template_name = 'admin_pages/add_product.html'
     success_url = reverse_lazy('staff:products')
 
+
 # Класс для отображения товаров
 class ProductListView(ListView):
     model = Product
@@ -47,7 +48,6 @@ class ProductDetailView(DetailView):
     template_name = 'admin_pages/detail_product.html'
     context_object_name = 'product'
     slug_url_kwarg = 'slug'
-
 
 class ProductsByCategoryListView(ListView):
     model = Product
