@@ -49,6 +49,9 @@ class ProductDetailView(DetailView):
     context_object_name = 'product'
     slug_url_kwarg = 'slug'
 
+
+###########################  КЛИЕНТ    #########################
+
 class ProductsByCategoryListView(ListView):
     model = Product
     template_name = 'shop/index.html'
