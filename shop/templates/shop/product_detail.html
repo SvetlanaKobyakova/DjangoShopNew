@@ -25,24 +25,36 @@
     </div>
 
     {% if product.image %}
-        <div>
-            <img width="200" height="auto" src="{{ product.image.url }}">
-        </div>
+    <div>
+        <img width="200" height="auto" src="{{ product.image.url }}">
+    </div>
     {% else %}
-        <div>
-            <img src="{% static 'img/no_image.png'%}" width="150px" height="auto">
-        </div>
+    <div>
+        <img src="{% static 'img/no_image.png'%}" width="150px" height="auto">
+    </div>
     {% endif %}
 
     <div>
         {% if product.available %}
-            <span>Доступен к продаже</span>
+        <span>Доступен к продаже</span>
         {% else %}
-            <span>Не доступен к продаже</span>
+        <span>Не доступен к продаже</span>
         {% endif %}
     </div>
     <div>
         Дата создания позиции: <span>{{ product.created_at }}</span>
+    </div>
+    <div>
+        <form action="" method="get">
+            <button type="submit">В корзину</button>
+        </form>
+    </div>
+    <div>
+        <form action="" method="get">
+            <button type="submit">
+                В избранное ❤️
+            </button>
+        </form>
     </div>
 </div>
 

@@ -53,6 +53,7 @@ class ProductDetailView(DetailView):
 ###########################  КЛИЕНТ    #########################
 
 class ProductsByCategoryListView(ListView):
+    paginate_by = 3
     model = Product
     template_name = 'shop/index.html'
     context_object_name = 'products'
@@ -75,8 +76,14 @@ class ProductsByCategoryListView(ListView):
 
 
 class ProductDetailClientView(DetailView):
-        model = Product
-        template_name = 'shop/product_detail.html'
-        context_object_name = 'product'
-        slug_url_kwarg = 'slug'
+    model = Product
+    template_name = 'shop/product_detail.html'
+    context_object_name = 'product'
+    slug_url_kwarg = 'slug'
+
+
+# class ContactListView(ListView):
+#     paginate_by = 3
+#     model = Contact
+
 
