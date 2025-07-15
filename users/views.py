@@ -85,3 +85,4 @@ def change_password(request):
     else:
         form = CustomPasswordChangeForm(request.user)
     return render(request, template_name='users/change_password.html', context={'form': form})
+
